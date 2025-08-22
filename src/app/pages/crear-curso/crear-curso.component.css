@@ -1,0 +1,93 @@
+/* Contenedor principal */
+.form-wrapper {
+  max-width: 900px; /* Más ancho */
+  margin: 40px auto; /* Centrado vertical y horizontal */
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.form-wrapper h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 24px;
+}
+
+/* Formularios */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.2);
+  outline: none;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Mensajes de error */
+.error {
+  color: #b00020;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Botón guardar */
+.btn-guardar {
+  padding: 14px 0;
+  background-color: #1976d2;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-guardar:hover {
+  background-color: #115293;
+  transform: translateY(-2px);
+}
+
+.btn-guardar:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 24px;
+    margin: 20px;
+  }
+}

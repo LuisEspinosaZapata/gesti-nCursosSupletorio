@@ -1,0 +1,16 @@
+<div class="cursos-wrapper">
+  <div class="header">
+    <h2>Listado de Cursos</h2>
+    <a routerLink="/crear-curso" class="btn-crear">+ Crear curso</a>
+  </div>
+
+  <div *ngFor="let c of svc.cursos$ | async" class="curso-card">
+    <h3>{{ c.nombre | uppercase }}</h3>
+    <p><strong>Categoría:</strong> {{ c.categoria }}</p>
+    <p><strong>Instructor:</strong> {{ c.instructor }}</p>
+    <p><strong>Duración:</strong> {{ c.duracionHoras | horas }}</p>
+    <p><strong>Fecha de inicio:</strong> {{ c.fechaInicio | date:'mediumDate' }}</p>
+    <p><strong>Descripción:</strong> {{ c.descripcion }}</p>
+    <p *ngIf="c.costo != null"><strong>Costo:</strong> {{ c.costo | currency:'USD':'symbol':'1.0-0' }}</p>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="login-wrapper">
+  <h2>Login</h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate class="login-form">
+
+    <!-- Email -->
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" formControlName="email" />
+      <p *ngIf="form.get('email')?.touched && form.get('email')?.invalid" class="error">
+        <span *ngIf="form.get('email')?.hasError('required')">Email requerido.</span>
+        <span *ngIf="form.get('email')?.hasError('email')">Email inválido.</span>
+      </p>
+    </div>
+
+    <!-- Contraseña -->
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input type="password" formControlName="password" />
+      <p *ngIf="form.get('password')?.touched && form.get('password')?.invalid" class="error">
+        <span *ngIf="form.get('password')?.hasError('required')">Contraseña requerida.</span>
+        <span *ngIf="form.get('password')?.hasError('minlength')">Mínimo 4 caracteres.</span>
+      </p>
+    </div>
+
+    <!-- Botón -->
+    <button type="submit" [disabled]="form.invalid" class="btn-login">Ingresar</button>
+
+    <!-- Error general -->
+    <p *ngIf="error" class="error">Credenciales inválidas.</p>
+  </form>
+</div>

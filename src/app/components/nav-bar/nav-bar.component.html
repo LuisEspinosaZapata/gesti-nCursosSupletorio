@@ -1,0 +1,18 @@
+<header class="navbar">
+  <div class="navbar-brand">
+    <strong>Gestión de Cursos</strong>
+  </div>
+
+  <nav class="navbar-menu">
+    <a *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.label }}</a>
+  </nav>
+
+  <div class="navbar-actions">
+    <ng-container *ngIf="auth.isAuthenticated$ | async; else showLogin">
+      <button (click)="auth.logout()">Cerrar sesión</button>
+    </ng-container>
+    <ng-template #showLogin>
+      <a routerLink="/login">Login</a>
+    </ng-template>
+  </div>
+</header>

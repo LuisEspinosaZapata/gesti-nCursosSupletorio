@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nombre": "Angular Básico",
+    "descripcion": "Introducción a Angular, componentes y binding.",
+    "instructor": "Laura Pérez",
+    "duracionHoras": 20,
+    "categoria": "Frontend",
+    "fechaInicio": "2025-09-01T00:00:00.000Z",
+    "costo": 120
+  },
+  {
+    "id": 2,
+    "nombre": "Node.js Intermedio",
+    "descripcion": "APIs REST y Express.",
+    "instructor": "Carlos Ruiz",
+    "duracionHoras": 30,
+    "categoria": "Backend",
+    "fechaInicio": "2025-09-15T00:00:00.000Z",
+    "costo": 150
+  }
+]
